@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Tic Tac Toe</title>
+</head>
+
+<body>
+
+  <div class="msg-container hide">
+    <p class="win-msg">Congratulations! Winner X</p>
+    <button id="new-btn" class="btn">New Game</button>
+  </div>
+  <h1>Tic Tac Toe</h1>
+  <div class="container">
+    <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+    <button class="box"></button>
+  </div>
+  <button id="reset-btn" class="btn hide">Reset Game</button>
+
+  <div class="stats-btn-container">
+    <button id="stats-btn" class="btn">Stats</button>
+  </div>
+
+  <div class="panel-blur"></div>
+  <div class="panel">
+    <div class="panel-top">Game Stats
+      <button id="close-btn" class="btn">&times;</button>
+    </div>
+    <p class="stats-msg">Player X: 0<br><br>Player O: 0</p>
+  </div>
+
+  <div class="draw-panel">
+    <div class="draw-panel-top">OOPS...</div>
+    <p class="draw-msg">Match Drawn !</p>
+    <button id="close-draw-btn" class="btn">OK</button>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>

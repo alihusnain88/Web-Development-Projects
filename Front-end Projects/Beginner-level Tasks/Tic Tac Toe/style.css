@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    color: white;
+    background-color: #548687;
+    /* background-color: rgb(102, 102, 102); */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .msg-container {
+    height: 20vmin;
+    font-size: 1.5rem;
+    margin: 10px;
+  }
+  
+  h1 {
+    margin: 15px;
+    color: black;
+    font-size: 2.5rem;
+  }
+  
+  .container {
+    height: 50vh;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+  
+    gap: 1vmin;
+  }
+  
+  .box {
+    height: 16vmin;
+    width: 16vmin;
+    color: rgb(163, 5, 5);
+    font-size: 4rem;
+    background-color: rgb(197, 197, 197);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .btn {
+    height: 8vmin;
+    width: 18vmin;
+    color: white;
+    background-color: rgb(163, 5, 5);
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+    cursor:pointer;
+    transition-delay: 0s;
+    transition-duration: 0.1s;
+  }
+  
+  .btn:hover {
+    background-color: rgb(140, 10, 10);
+  }
+  .btn:active{
+    transform: scale(0.9);
+    /* background-color: green; */
+  }
+  
+  .stats-btn-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #stats-btn{
+    background-color: black;
+    height: 6vmin;
+    width: 10vmin;
+    font-size: 1rem;
+    margin: 0;
+  }
+  #stats-btn:hover{
+    background-color: grey;
+  }
+  .panel{
+    height: 40vh;
+    width: 40vh;
+    background-color: black;
+    border: solid 1px;
+    
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 1rem white;
+    opacity: 1;
+    display: none;
+    /* transition-duration: 2s; */
+    /* cursor: move; */
+  }
+  
+  .panel-blur{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: 0.5;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  
+  .stats-msg{
+    font-size: 1.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    margin-top: 10px;
+  }
+  
+  .panel-top{
+    background-color: grey;
+    color: black;
+    font-size: 2rem;
+    height: 15%;
+    line-height: 160%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    /* border-bottom: solid white 1px; */
+    /* border: solid black 1px; */
+  }
+  
+  #close-btn{
+    height: 4vmin;
+    width: 6vmin;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    border: solid white 0.5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 3px; 
+    margin-top: 3px; 
+  }
+  
+  .draw-panel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40%;
+    width: 30%;
+    background-color: black;
+    box-shadow: 0 0 1rem white;  
+    display:none;
+  }
+  #close-draw-btn{
+    height: 4vmin;
+    width: 8vmin;
+    font-size: 1.2rem;
+    /* border:solid white 1px;  */
+    border-radius:7px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%; 
+    transform: translateX(-85%);
+    
+  
+  }
+  
+  .draw-panel-top{
+    height: 13%;
+    width: 100%;
+    color: black;
+    background-color: grey;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+  }
+  .oops{
+    color: black;
+    font-size: 1.5rem;
+    
+  }
+  
+  .draw-msg{
+    color: white;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
