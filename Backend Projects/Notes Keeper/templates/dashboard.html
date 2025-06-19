@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Notes</title>
+    <style>
+        .note-card {
+            border: 1px solid #aaa;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+        }
+        .note-actions {
+            margin-top: 10px;
+        }
+        .note-actions a {
+            margin-right: 10px;
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .note-actions a.delete {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome, {{ session['user_name'] }}</h2>
+    <form method="post">
+        <label>Title:</label><br>
+        <input type="text" name="title"><br>
+        <label>Content:</label><br>
+        <textarea name="content" rows="5" cols="30"></textarea><br>
+        <input type="submit" value="Add Note">
+    </form>
+    <h3>Your Notes:</h3>
+    {% for note in notes %}
+        <div class="note-card">
+            <strong>{{ note.title }}</strong><br>
+            <p>{{ note.content }}</p>
+            <small>{{ note.created_at }}</small>
+            <div class="note-actions">
+                <a href="/edit/{{ note.id }}">Edit</a>
+                <a href="/delete/{{ note.id }}" class="delete">Delete</a>
+            </div>
+        </div>
+    {% endfor %}
+    <br><a href="/logout">Logout</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# Editor directories and files
+.idea/
+.vscode/ # If you use VS Code, you might have this too
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp # Vim swap files
+.DS_Store # macOS specific
+
+# Generated files / Local data
+__pycache__/ # Python compiled bytecode cache
+*.pyc      # Python compiled bytecode files
+.env       # Environment variable files (can contain sensitive info)
+database/  # Your local database folder (assuming it holds database files)
+*.db       # Generic rule for database files (e.g., for SQLite: myapp.db)
